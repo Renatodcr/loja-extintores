@@ -1,0 +1,375 @@
+.conatiner {
+    width: 100%;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+}
+a:hover {
+    opacity: 0.8;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px 60px;
+    background-color: #bc1718;
+}
+.img-head {
+    display: none;
+    color: #fff;
+    font-size: 3.8rem;
+}
+
+.titulo {
+    color: #fff;
+}
+
+#check {
+    display: none;
+}
+
+nav {
+    padding: 5px;
+    display: flex;
+    padding-right: 0px;
+}
+nav .link-nav {
+    position: relative;
+    line-height: 2.8rem;
+    margin: 0px 5px auto;
+    margin-left: 25px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav .link-nav::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transition: all 0.5s ease;
+}
+
+nav .link-nav:hover::after {
+    left: 0%;
+    width: 100%;
+}
+div .empresa {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f7f4ff;
+}
+
+.descricao {
+    width: 55%;
+    padding: 10px;
+}
+
+.descricao h2 {
+    font-size: 3.0rem;
+    line-height: 3.8rem;
+    color: #770c0c;
+    padding-bottom: 20px;
+}
+
+.descricao p {
+    font-size: 1.9rem;
+    line-height: 2.4rem;
+    color: #4e4e4e;
+    text-align: left;
+}
+
+.img-empresa {
+    flex: 1;
+}
+
+.img-emp {
+    width: 100%;
+    display: flex;
+}
+
+div .produtos {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.descricao-produtos{
+    width: 30%;
+    padding: 10px;
+    line-height: 2.4rem;
+}
+
+.descricao-produtos h2 {
+    font-size: 3.0rem;
+    color: #770c0c;
+    padding-bottom: 20px;
+}
+
+.descricao-produtos p {
+    color: #535353;
+    line-height: 2.4rem;
+}
+
+section>ul {
+    padding-bottom: 20px;
+    color: #535353;
+    list-style: none;
+}
+
+section>h3 {
+    padding-bottom: 5px;
+    color: #770c0c;
+
+}
+
+.extintores {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #c2c2c2;
+}
+.card-estintores {
+    border-radius: 6px;
+    box-shadow: 4px 4px 8px #ccc;
+    text-align: center;
+}
+
+.card-estintores img {
+    width: 100%;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.card-estintores p {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #464646;
+    font-size: 1.4rem;
+}
+
+.contato {
+    background-color: #bc1718;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 20px;
+}
+
+.box-contato {  
+    line-height: 2.8rem;
+    color: #eeeeee;  
+    display: flex;
+    flex-direction: column;
+}
+
+.box-contato h2 {
+    font-size: 3.0rem;
+    color: #e7e7e7;
+    padding-bottom: 10px;
+}
+
+.box-contato a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+footer {
+    line-height: 2.9rem;
+    display: flex;
+    padding: 20px 60px;
+    background-color: #770c0c;
+    color: #fff;
+    font-size: 1.6rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #eeeeee;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1024px) {    
+    nav {
+        display: none;
+        transition-duration: 0.5s;
+    }
+
+    span{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    .titulo{
+        display: none;
+    }
+
+    .img-head {
+        display: block;
+    }
+
+    #check {
+        position: absolute;
+        opacity: 0;
+    }
+
+    label {
+        cursor: pointer;
+        position: relative;
+        display: block;
+        height: 22px;
+        width: 30px;
+    }
+
+    label span {
+        position: absolute;
+        display: block;
+        height: 3px;
+        width: 100%;
+        border-radius: 30px;
+        background-color: #fff;
+        transition: 0.3s ease-in-out;
+    }
+
+    label span:nth-child(1) {
+        top: 8px;
+    }
+    label span:nth-child(2) {
+        top: 16px;
+    }
+    label span:nth-child(3) {
+        top: 24px;
+    }
+
+    #check:checked + label span:nth-child(1){
+        transform: rotate(-45deg);
+        top: 16px;
+    }
+    #check:checked + label span:nth-child(2){
+        opacity: 0;
+    }
+    #check:checked + label span:nth-child(3){
+        transform: rotate(45deg);
+        top: 16px;
+    }
+
+    #check:checked ~ nav {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    div .empresa {
+        flex-direction: column;  
+        justify-content: center;      
+        align-items: center;
+    }
+
+    .descricao{
+        width: 100%;
+    }
+
+    .img-empresa{
+        width: 100%;
+        order: -1;
+    }
+
+    .contato {
+        align-items: center;
+    }
+
+    .box-contato {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 814px) {
+    div .produtos {
+        flex-direction: column;
+    }
+
+    .extintores {
+        width: 100%;
+        border: none;
+        padding-left: 0px;
+    }
+
+    .descricao-produtos {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 579px) {
+    header {
+        padding: 20px;
+    }
+
+    .descricao-produtos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contato {
+        align-items: flex-start;
+    }
+
+    .box-contato {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

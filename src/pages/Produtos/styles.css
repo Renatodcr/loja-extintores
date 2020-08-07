@@ -1,0 +1,96 @@
+div .produtos1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fafafa;
+}
+
+.descricao-produtos1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px;
+    border-bottom: 2px dashed #c2c2c2;
+    margin-bottom: 20px;
+}
+
+.descricao-produtos1 h2 {
+    font-size: 3.0rem;
+    color: #770c0c;
+    padding-bottom: 5px;
+}
+
+.descricao-produtos1 p {
+    color: #535353;
+}
+
+.classificacao {
+    width: 40%;
+    margin-left: 20px;
+}
+
+section>div>ul {
+    padding-bottom: 20px;
+    color: #535353;
+    list-style: none;
+}
+
+section>div>h3 {
+    padding-bottom: 5px;
+    color: #770c0c;
+
+}
+
+.extintores1 {
+    width: 80%;
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+.card-estintores1 {
+    border-radius: 6px;
+    box-shadow: 4px 4px 8px #ccc;
+    text-align: center;
+}
+
+.card-estintores1 img {
+    width: 100%;
+    border-radius: 6px 6px 0px 0px;
+}
+
+.card-estintores1 p {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #464646;
+    font-size: 1,4rem;
+}
+
+@media (max-width: 1027px) {
+    .extintores1 {
+        width: 90%;
+    }
+}
+
+@media (max-width: 917px) {
+    .extintores1 {
+        width: 100%;
+    }
+}
+
+@media (max-width: 573px) {
+    .descricao-produtos1{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .classificacao {
+        width: 100%;
+        margin-left: 0px;
+    }
+}

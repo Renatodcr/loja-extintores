@@ -1,0 +1,18 @@
+.desc-empresa {
+    width: 100% ;
+}
+
+.contain-empresa {
+    padding: 20px;
+    background-color: #fff4f4;
+}
+
+.img-empresa2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-emp2 {
+    width: 100%;
+}
